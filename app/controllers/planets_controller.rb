@@ -25,6 +25,11 @@ class PlanetsController < ApplicationController
     planet.mass = params[:mass] || planet.mass
     planet.orbital_distance = params[:orbital_distance] || planet.orbital_distance
     planet.color = params[:color] || planet.color
+    if planet.save
+      render json: planet.as_json
+    else 
+      render json: {error: planet.errors.full_messages}, status: 406
+    end
   end
 
   def destroy
