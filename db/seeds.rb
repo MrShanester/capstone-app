@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Planet.create(name: "Earth", diameter: 7917, mass: 6, orbital_distance: 1, color: "blue")
+# Planet.create(name: "Mars", diameter: 3127, mass: 3, orbital_distance: 2, color: "red")
+# Planet.create(name: "Jupiter", diameter: 14447, mass: 17, orbital_distance: 3, color: "orange")
