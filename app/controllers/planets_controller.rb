@@ -4,9 +4,9 @@ class PlanetsController < ApplicationController
     render json: planet.as_json
   end
 
-  def index
-    planet = Planet.find_by(name: params[:name])
+  def indexplanet = Planet.find_by(name: params[:name])
     render json: planet.as_json
+    
   end
 
   def create
@@ -34,11 +34,8 @@ class PlanetsController < ApplicationController
 
   def destroy
     planet = Planet.find_by(name: params[:name])
-    if planet.delete
-      render json: {message: "#{input} destroyed"
-    else 
-      render json: {message: "Destruction failed."}
-    end
+    planet.delete
+    render json: {message: "#{input} destroyed"
   end
 
 end
